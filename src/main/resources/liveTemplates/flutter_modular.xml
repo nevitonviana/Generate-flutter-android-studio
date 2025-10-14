@@ -1,0 +1,39 @@
+<templateSet group="Flutter modular Templastes ">
+    <template name="fm-ModularApp" description="create class ModularApp " toReformat="true"
+        toShortenFQNames="true"
+        value="import 'package:flutter/material.dart'; &#10;import 'package:flutter_modular/flutter_modular.dart';&#10;&#10;void main(){&#10;return runApp(ModularApp(module: AppModule(), child: AppWidget()));&#10;}">
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="fm-AppModule" description="create class AppModule " toReformat="true"
+        toShortenFQNames="true"
+        value="import 'package:flutter/material.dart'; &#10;import 'package:flutter_modular/flutter_modular.dart';&#10;&#10;class $CLASSNAME$ extends Module {&#10;&#10;@override&#10;void binds(i) {}&#10;&#10;@override&#10;void routes(r) {}&#10;}">
+        <variable name="CLASSNAME" alwaysStopAt="false" defaultValue=""
+            expression="capitalize(camelCase(fileNameWithoutExtension()))" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="fm-AppWidget" description="create class AppWidget " toReformat="true"
+        toShortenFQNames="true"
+        value="import 'package:flutter/material.dart'; &#10;import 'package:flutter_modular/flutter_modular.dart';&#10;&#10;class $CLASSNAME$ extends StatelessWidget {&#10;Widget build(BuildContext context){&#10;&#10;return MaterialApp.router(routerConfig: Modular.routerConfig,);}}">
+        <variable name="CLASSNAME" alwaysStopAt="false" defaultValue=""
+            expression="capitalize(camelCase(fileNameWithoutExtension()))" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="fm-get" description="create modular get " toReformat="true"
+        toShortenFQNames="true" value="final $variable$ = Modular.get&lt;$VARNAME$&gt;()">
+        <variable name="variable" alwaysStopAt="true" defaultValue=""
+            expression="dartSuggestVariableName()" />
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+</templateSet>

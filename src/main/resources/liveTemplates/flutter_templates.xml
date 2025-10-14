@@ -1,0 +1,119 @@
+<templateSet group="Flutter Templastes ">
+    <template name="c-className" description="create class with the name of file" toReformat="true"
+        toShortenFQNames="true" value="class $CLASSNAME$ {&#10;$CODE$&#10;}">
+        <variable name="CLASSNAME" alwaysStopAt="false" defaultValue=""
+            expression="capitalize(camelCase(fileNameWithoutExtension()))" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="c-classNameImplements"
+        description="create class with the name of file with  implements" toReformat="true"
+        toShortenFQNames="true"
+        value="class $CLASSNAME$ implements $NAMEIMPLEMENT$ {&#10;$CODE$&#10;}">
+        <variable name="CLASSNAME" alwaysStopAt="false" defaultValue=""
+            expression="capitalize(camelCase(fileNameWithoutExtension()))" />
+        <variable name="NAMEIMPLEMENT" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="c-classNameExtends"
+        description="create class with the name of file with  extends" toReformat="true"
+        toShortenFQNames="true" value="class $CLASSNAME$ extends $NAMEEXTENDS$ {&#10;$CODE$&#10;}">
+        <variable name="CLASSNAME" alwaysStopAt="false" defaultValue=""
+            expression="capitalize(camelCase(fileNameWithoutExtension()))" />
+        <variable name="NAMEEXTENDS" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="c-classAbstractName"
+        description="create class Abstract with the name of file " toReformat="true"
+        toShortenFQNames="true" value="abstract class $CLASSNAME$ {&#10;$CODE$&#10;}">
+        <variable name="CLASSNAME" alwaysStopAt="false" defaultValue=""
+            expression="capitalize(camelCase(fileNameWithoutExtension()))" />
+        <variable name="NAMEEXTENDS" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+
+    <template name="s-staticConst" description="create static with const" toReformat="true"
+        toShortenFQNames="true" value="static const $VARNAME$ = '$CODE$';">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="f-futureVoid" description="create Future Void" toReformat="true"
+        toShortenFQNames="true" value="Future&lt;void&gt; $VARNAME$() async {&#10;$CODE$&#10;}">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="f-futureString" description="create Future with return String" toReformat="true"
+        toShortenFQNames="true" value="Future&lt;String&gt; $VARNAME$() async {&#10;$CODE$&#10;}">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="f-futureBoolean" description="create Future with return Boolean" toReformat="true"
+        toShortenFQNames="true" value="Future&lt;bool&gt; $VARNAME$() async {&#10;$CODE$&#10;}">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="f-futureMultipleResult" description="create Future with return Boolean" toReformat="true"
+        toShortenFQNames="true" value=" Future&lt;Result&lt;$VARNAME$, Exception&gt;&gt; (&#10;$CODE$&#10;)">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="e-enumName"
+        description="create enum with the name of file " toReformat="true"
+        toShortenFQNames="true" value="enum $CLASSNAME$ {&#10;$CODE$&#10;}">
+        <variable name="CLASSNAME" alwaysStopAt="false" defaultValue=""
+            expression="capitalize(camelCase(fileNameWithoutExtension()))" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="e-enumExtension"
+        description="create extension of enum with the name of file " toReformat="true"
+        toShortenFQNames="true" value="extension $CLASSNAME$ on $EXTENSIONNAME$ {&#10;$CODE$&#10;}">
+        <variable name="CLASSNAME" alwaysStopAt="false" defaultValue=""
+            expression="capitalize(camelCase(fileNameWithoutExtension()))" />
+        <variable name="EXTENSIONNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="CODE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+
+</templateSet>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="15" height="15" role="img" aria-labelledby="title desc">
+    <title id="title">Generate Folder Structure Action in MVVM</title>
+    <desc id="desc">Ícone que mostra uma pasta com uma engrenagem e seta de geração, com três blocos M, V, VM representando a arquitetura MVVM.</desc>
+
+    <!-- Background circle (subtle) -->
+<!--    <circle cx="128" cy="128" r="120" fill="#F5F7FA"/>-->
+
+    <!-- Folder -->
+    <g transform="translate(18,38)">
+        <!-- folder body -->
+        <path d="M16 44 L16 120 Q16 128 24 128 L176 128 Q184 128 184 120 L184 64 Q184 56 176 56 L88 56 Q84 56 80 52 L64 36 Q60 32 56 32 L24 32 Q16 32 16 40 Z"
+            fill="#FFD66B" stroke="#B77F00" stroke-width="2.5" />
+        <!-- folder top tab -->
+        <rect x="24" y="24" width="56" height="18" rx="3" fill="#FFE38C" stroke="#B77F00" stroke-width="2"/>
+    </g>
+
+    <!-- Gear (action/automation) inside folder -->
+    <g transform="translate(86,86) scale(0.9)">
+        <g transform="translate(0,0)">
+            <circle cx="32" cy="32" r="12" fill="#FFFFFF" stroke="#4B5563" stroke-width="2"/>
+            <!-- gear teeth using small rectangles rotated -->
+            <g fill="#FFFFFF" stroke="#4B5563" stroke-width="1.6">
+                <rect x="30" y="2" width="4" height="10" rx="1" transform="rotate(0 32 32)"/>
+                <rect x="54" y="30" width="10" height="4" rx="1" transform="rotate(90 32 32)"/>
+                <rect x="30" y="54" width="4" height="10" rx="1" transform="rotate(180 32 32)"/>
+                <rect x="2" y="30" width="10" height="4" rx="1" transform="rotate(270 32 32)"/>
+                <rect x="48" y="10" width="4" height="8" rx="1" transform="rotate(45 32 32)"/>
+                <rect x="48" y="48" width="4" height="8" rx="1" transform="rotate(135 32 32)"/>
+                <rect x="10" y="48" width="4" height="8" rx="1" transform="rotate(225 32 32)"/>
+                <rect x="10" y="10" width="4" height="8" rx="1" transform="rotate(315 32 32)"/>
+            </g>
+            <!-- small center hole -->
+            <circle cx="32" cy="32" r="4" fill="#4B5563"/>
+        </g>
+    </g>
+
+    <!-- Generate arrow (pointing into folder) -->
+    <g transform="translate(150,26)">
+        <path d="M62 14 L94 14 L94 38" fill="none" stroke="#16A34A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M94 38 L84 28 M94 38 L104 28" fill="none" stroke="#16A34A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- MVVM blocks to the right (stacked, symbolizing structure) -->
+    <g transform="translate(170,132)">
+        <!-- M block -->
+        <rect x="0" y="0" width="60" height="28" rx="4" fill="#E6F3FF" stroke="#2563EB" stroke-width="1.8"/>
+        <text x="30" y="18" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A8A" text-anchor="middle">M</text>
+
+        <!-- V block -->
+        <rect x="0" y="38" width="60" height="28" rx="4" fill="#F0FDF4" stroke="#059669" stroke-width="1.8"/>
+        <text x="30" y="56" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="14" font-weight="700" fill="#065F46" text-anchor="middle">V</text>
+
+        <!-- VM block -->
+        <rect x="0" y="76" width="60" height="28" rx="4" fill="#FFF7ED" stroke="#EA580C" stroke-width="1.8"/>
+        <text x="30" y="94" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="13" font-weight="700" fill="#92400E" text-anchor="middle">VM</text>
+    </g>
+
+    <!-- Small connecting dotted lines (structure lines) -->
+    <g stroke="#9CA3AF" stroke-width="1.2" fill="none" stroke-dasharray="3 4">
+        <path d="M150 140 L170 140"/>
+        <path d="M150 172 L170 172"/>
+        <path d="M150 204 L170 204"/>
+    </g>
+</svg>

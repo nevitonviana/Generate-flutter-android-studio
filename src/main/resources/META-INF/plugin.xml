@@ -1,0 +1,96 @@
+<idea-plugin>
+    <id>com.nevitonviana.generateflutter.generateflutter</id>
+    <name>Flutter Template Generator</name>
+    <description>Adiciona templates Dart/Flutter ao projeto</description>
+    <vendor email="nevitonviana1@hotmail.com" url="https://github.com/nevitonviana">Neviton Viana
+    </vendor>
+
+    <idea-version since-build="203" until-build="241.*" />
+
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+    <depends>Dart</depends>
+
+        <actions>
+            <action  icon="/META-INF/generate_folder_mvvm.svg"
+                class="com.nevitonviana.generateflutter.generateflutter.GenerateFolderStructureActionInMVVM"
+                description="Cria novo arquivo Flutter com base em template" id="GenerateProject"
+                text="Generate MVVM architecture">
+                <add-to-group anchor="last" group-id="NewGroup" />
+            </action>
+
+            <action icon="/META-INF/GenerateFolder.svg" class="com.nevitonviana.generateflutter.generateflutter.GenerateFolder"
+                description="Cria novo arquivo Flutter com base em template" id="Generatefolder"
+                text="Generate folder ">
+                <add-to-group anchor="last" group-id="NewGroup" />
+            </action>
+        </actions>
+
+        <extensions defaultExtensionNs="com.intellij">
+            <defaultLiveTemplates file="/liveTemplates/flutter_templates.xml" />
+            <defaultLiveTemplates file="/liveTemplates/flutter_mobx_template.xml" />
+            <defaultLiveTemplates file="/liveTemplates/flutter_modular.xml" />
+            <liveTemplateContext contextId="FLUTTER_GENERATOR"
+                implementation="com.nevitonviana.generateflutter.generateflutter.FlutterContext" />
+
+        </extensions>
+    <actions>
+
+        <action
+            class="com.nevitonviana.generateflutter.generateflutter.generateImplement.CreateDartClassFileAction"
+            id="com.nevitonviana.generateflutter.generateflutter.generateImplement.CreateDartClassFileAction">
+            <add-to-group anchor="before" group-id="NewGroup"
+                relative-to-action="NewFromTemplate" />
+        </action>
+    </actions>
+    <extensions defaultExtensionNs="com.intellij">
+        <internalFileTemplate name="Dart Class File" />
+        <internalFileTemplate name="Dart Abstract Class File" />
+        <internalFileTemplate name="Dart Abstract Base Class File" />
+        <internalFileTemplate name="Dart Abstract Final Class File" />
+        <internalFileTemplate name="Dart Abstract Interface Class File" />
+        <internalFileTemplate name="Dart Base Class File" />
+        <internalFileTemplate name="Dart Final Class File" />
+        <internalFileTemplate name="Dart Interface Class File" />
+        <internalFileTemplate name="Dart Sealed Class File" />
+
+        <createFromTemplateHandler id="dart"
+            implementation="com.nevitonviana.generateflutter.generateflutter.generateImplement.fileTemplates.DartCreateFromTemplateHandler"
+            order="first" />
+
+        <intentionAction>
+            <language>Dart</language>
+            <className>
+                com.nevitonviana.generateflutter.generateflutter.generateImplement.ImplementAbstractClass
+            </className>
+            <category>Dart</category>
+        </intentionAction>
+
+    </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <internalFileTemplate name="Dart Test File" />
+        <intentionAction>
+            <language>Dart</language>
+            <className>
+                com.nevitonviana.generateflutter.generateflutter.generateImplement.GenerateTestFileIntention
+            </className>
+            <category>Dart</category>
+        </intentionAction>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <internalFileTemplate name="Dart Widget Test File" />
+
+        <intentionAction>
+            <language>Dart</language>
+            <className>
+                com.nevitonviana.generateflutter.generateflutter.generateImplement.GenerateWidgetTestFileIntention
+            </className>
+            <category>Dart</category>
+        </intentionAction>
+
+    </extensions>
+
+</idea-plugin>

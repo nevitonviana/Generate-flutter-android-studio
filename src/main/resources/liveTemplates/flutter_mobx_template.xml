@@ -1,0 +1,209 @@
+<templateSet group="Flutter mobx template">
+    <template name="m-mobxSote" description="Create new mobx store class" toReformat="true"
+        toShortenFQNames="true"
+        value="import 'package:mobx/mobx.dart';&#10; part '$CLASSNAME$.g.dart';&#10;class $CLASSNAMEUPCASA$ = $CLASSNAMEUPCASA$Base with _$$$CLASSNAMEUPCASA$;&#10;&#10;abstract class $CLASSNAMEUPCASA$Base with Store{&#10;}">
+        <variable name="CLASSNAME" alwaysStopAt="true" defaultValue="" expression="fileNameWithoutExtension()" />
+        <variable name="CLASSNAMEUPCASA" alwaysStopAt="true" defaultValue="" expression="capitalize(camelCase(fileNameWithoutExtension()))" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="m-obs" description="Create Observer"
+        toReformat="true" toShortenFQNames="true" value="Observer(&#10; Observer(builder: (_) {&#10;    return $CODE$;&#10;},&#10;)">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="m-stringObservable" description="Create Observable with String type"
+        toReformat="true" toShortenFQNames="true" value="@observable&#10;String $VARNAME$ = '';">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="m-intObservable" description="Create Observable with int type" toReformat="true"
+        toShortenFQNames="true" value="@observable&#10;int $VARNAME$ = 0;">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-doubleObservable" description="Create Observable with double type"
+        toReformat="true" toShortenFQNames="true" value="@observable&#10;double $VARNAME$ = 0.0;">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-booleanObservable" description="Create Observable with boolean type"
+        toReformat="true" toShortenFQNames="true" value="@observable&#10;bool $VARNAME$ = false;">
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-customTypeObservable" description="Create Observable with user define type"
+        toReformat="true" toShortenFQNames="true"
+        value="@observable&#10; $TYPE$ $VARNAME$ = $TYPE$();">
+        <variable name="TYPE" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="m-voidAction" description="Create action with String return type"
+        toReformat="true" toShortenFQNames="true" value="@action&#10;void $METHODNAME$(){&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-stringAction" description="Create action with String return type"
+        toReformat="true" toShortenFQNames="true"
+        value="@action&#10;String $METHODNAME$(){&#10; return '';&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-intAction" description="Create action with int return type" toReformat="true"
+        toShortenFQNames="true" value="@action&#10;int $METHODNAME$(){&#10; return 0;&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-doubleAction" description="Create action with double return type"
+        toReformat="true" toShortenFQNames="true"
+        value="@action&#10;double $METHODNAME$(){&#10; return 0.0;&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-booleanAction" description="Create action with Boolean return type"
+        toReformat="true" toShortenFQNames="true"
+        value="@action&#10;bool $METHODNAME$(){&#10; return false;&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-customTypeAction" description="Create action with user define return type"
+        toReformat="true" toShortenFQNames="true"
+        value="@action&#10;$TYPE$ $METHODNAME$(){&#10; return $TYPE$();&#10;}">
+        <variable name="TYPE" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="m-futureVoidAction" description="Create future action with void return type"
+        toReformat="true" toShortenFQNames="true"
+        value=" @action&#10;Future&lt;void&gt; $METHODNAME$() async{&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-futureStringAction" description="Create future action with String return type"
+        toReformat="true" toShortenFQNames="true"
+        value=" @action&#10;Future&lt;String&gt; $METHODNAME$() async{&#10; return '';&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-futureIntAction" description="Create future action with int return type"
+        toReformat="true" toShortenFQNames="true"
+        value=" @action&#10;Future&lt;int&gt; $METHODNAME$() async{&#10; return 0;&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-FutureDoubleAction" description="Create future action with double return type"
+        toReformat="true" toShortenFQNames="true"
+        value=" @action&#10;Future&lt;double&gt; $METHODNAME$() async{&#10; return 0.0;&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-futureBooleanAction" description="Create action with Boolean return type"
+        toReformat="true" toShortenFQNames="true"
+        value=" @action&#10;Future&lt;bool&gt; $METHODNAME$() async{&#10; return false;&#10;}">
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-futureCustomTypeAction"
+        description="Create action with user define return type" toReformat="true"
+        toShortenFQNames="true"
+        value=" @action&#10;Future&lt;$TYPE$&gt; $METHODNAME$() async{&#10; return $TYPE$;&#10;}">
+        <variable name="TYPE" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="METHODNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+
+    <template name="m-storeObservableList"
+        description="Create Observable list with preferred data type" toReformat="true"
+        toShortenFQNames="true"
+        value="ObservableList&lt;$TYPE$&gt; $VARNAME$ = ObservableList&lt;$TYPE$&gt;.of([]);">
+        <variable name="TYPE" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-storeObservableSet"
+        description="Create Observable set with preferred data type" toReformat="true"
+        toShortenFQNames="true"
+        value="ObservableSet&lt;$TYPE$&gt; $VARNAME$ = ObservableSet&lt;$TYPE$&gt;.of([]);">
+        <variable name="$TYPE$" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-storeObservableMap"
+        description="Create Observable map with preferred datatype" toReformat="true"
+        toShortenFQNames="true"
+        value="ObservableMap&lt;$TYPE1$,$TYPE2$&gt; $VARNAME$ = ObservableMap&lt;$TYPE1$,$TYPE2$&gt;.of({});">
+        <variable name="TYPE1" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="TYPE2" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-storeObservableFuture"
+        description="Create Observable future with preferred data type" toReformat="true"
+        toShortenFQNames="true"
+        value="static ObservableFuture&lt;$TYPE$&gt; $VARNAME$ = ObservableFuture.value();">
+        <variable name="TYPE" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+    <template name="m-storeObservableStream"
+        description="Create Observable stream with preferred data type" toReformat="true"
+        toShortenFQNames="true"
+        value="static ObservableStream&lt;$TYPE$&gt; $VARNAME$ = $STREAM$.asObservable();">
+        <variable name="TYPE" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="STREAM" alwaysStopAt="true" defaultValue="" expression="" />
+        <variable name="VARNAME" alwaysStopAt="true" defaultValue="" expression="" />
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
+</templateSet>
